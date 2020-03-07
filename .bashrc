@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000000
-HISTFILESIZE=2000000
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -115,20 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-export PATH="$PATH:$HOME/dotnet"
-export DOTNET_ROOT="$HOME/dotnet"
+export PATH=/usr/local/cuda-10.0/bin:$HOME/dotnet:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:$LD_LIBRARY_PATH
+export DOTNET_ROOT=$HOME/dotnet
 
 # Custom aliases
 alias mkcd='mkdir $1 && cd $1'
-alias gc='git commit -m $1'
-alias gac='git commit -am $1'
-alias gmerge='git merge --no-ff upstream/master'
-alias greb='git pull --rebase origin master'
-alias grebup='git pull --rebase upstream master'
-alias gfm='git fetch --all && git merge --no-ff upstream/master'
-alias gnb='git checkout -b $1'
-alias gnbu='git checkout -b $1 $2'
 alias res='sudo systemctl restart $1'
 alias stop='sudo systemctl stop $1'
 alias logs='sudo journalctl -r -n 50 -u $1'
@@ -227,3 +219,12 @@ alias gmv="git mv"
 alias gtg="git tag"
 alias gbr="git branch"
 alias gs="git svn"
+alias gfa="git fetch --all"
+alias gc='git commit -m $1'
+alias gac='git commit -am $1'
+alias gmerge='git merge --no-ff upstream/master'
+alias greb='git pull --rebase origin master'
+alias grebup='git pull --rebase upstream master'
+alias gfm='git fetch --all && git merge --no-ff upstream/master'
+alias gnb='git checkout -b $1'
+alias gnbu='git checkout -b $1 $2'
