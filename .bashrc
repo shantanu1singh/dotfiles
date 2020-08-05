@@ -212,6 +212,7 @@ echo -ne "Hello, $USER. today is, "; date
 alias cal="cal -m -3"
 alias git="nice git"
 alias gsh="git stash"
+alias gs="git status"
 alias gst="git status --short --branch"
 alias gsu="git submodule update --recursive --merge"
 alias gdf="git diff"
