@@ -227,7 +227,6 @@ alias grm="git rm"
 alias gmv="git mv"
 alias gtg="git tag"
 alias gbr="git branch"
-alias gs="git svn"
 alias gfa="git fetch --all"
 alias gc='git commit -m $1'
 alias gac='git commit -am $1'
