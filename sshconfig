@@ -45,8 +45,19 @@ IdentitiesOnly yes
 # Alternately, you can just replace the hostname in your SSH URL with ssh.dev.azure.com.  Both
 # ssh.dev.azure.com and vs-ssh.visualstudio.com point to the same place.
 Host vs-ssh.visualstudio.com
-IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/vsts
 IdentitiesOnly yes
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github
+  IdentitiesOnly yes
+  
+Host gitlab.com
+  HostName gitlab.com
+  IdentityFile ~/.ssh/gitlab
+  IdentitiesOnly yes
 
 # If you have an on-premises Azure DevOps Server instance, where SSH URLs look like
 # ssh://someHost:22/someCollection/some_project/_git/some_repo, add the following Host section:
