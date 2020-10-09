@@ -237,3 +237,5 @@ alias gfm='git fetch --all && git merge --no-ff upstream/master'
 alias gnb='git checkout -b $1'
 alias gnbu='git checkout -b $1 $2'
 alias gpo='git push -u origin $1'
+
+eval `keychain --eval vsts`
