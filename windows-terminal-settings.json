@@ -28,6 +28,8 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
+            "backgroundImage": "C:\\Users\\shsi\\Downloads\\1213299.jpg",
+            "backgroundImageOpacity": 0.8
         },
         "list":
         [
